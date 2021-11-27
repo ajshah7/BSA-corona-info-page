@@ -17,8 +17,14 @@ const Footer = () => {
           className="half-virus-img"
           alt="virus"
           src={PaleRedVirusRight}
-        ></img>
-        <img className="full-virus-img" alt="virus" src={PaleVirus}></img>
+          loading="lazy"
+        />
+        <img
+          className="full-virus-img"
+          alt="virus"
+          src={PaleVirus}
+          loading="lazy"
+        />
         <div className="heading">
           Have Question in mind?
           <br />
@@ -31,7 +37,7 @@ const Footer = () => {
       </div>
       <div className="footer-navigation">
         <div className="footer-logo">
-          <img className="logo" alt="logo" src={FooterVirus} />
+          <img className="logo" alt="logo" src={FooterVirus} loading="lazy" />
           <div className="logo-heading">Covid - 19</div>
         </div>
         <div className="footer-nav-items">
@@ -49,10 +55,26 @@ const Footer = () => {
           </HashLink>
         </div>
         <div className="footer-nav-items">
-          <img className="logo-item" alt="FaceBook" src={FaceBook} />
-          <img className="logo-item" alt="Youtube" s src={Youtube} />
-          <img className="logo-item" alt="Vimeo" src={Vimeo} />
-          <img className="logo-item" alt="Twitter" src={Twitter} />
+          <img
+            className="logo-item"
+            alt="FaceBook"
+            src={FaceBook}
+            loading="lazy"
+          />
+          <img
+            className="logo-item"
+            alt="Youtube"
+            s
+            src={Youtube}
+            loading="lazy"
+          />
+          <img className="logo-item" alt="Vimeo" src={Vimeo} loading="lazy" />
+          <img
+            className="logo-item"
+            alt="Twitter"
+            src={Twitter}
+            loading="lazy"
+          />
         </div>
       </div>
       <div className="copy-right-text">

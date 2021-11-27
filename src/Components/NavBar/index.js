@@ -7,7 +7,7 @@ export default function NavbarComp() {
   return (
     <div className="navbar-component">
       <div className="logo-wrapper">
-        <img className="logo" src={FooterVirus} alt="logo" />
+        <img className="logo" src={FooterVirus} alt="logo" loading="lazy" />
         <div className="heading">Covid - 19</div>
       </div>
 

@@ -27,7 +27,8 @@ export default function PreventionSection() {
             <img
               className="illustration-image"
               src={data.coverImage}
-              alt="cover "
+              alt="cover"
+              loading="lazy"
             />
             <div className="data-wrapper odd">
               <div className="text-items">
@@ -37,11 +38,13 @@ export default function PreventionSection() {
                       className="right-virus"
                       alt="virus"
                       src={RedVirusRight}
+                      loading="lazy"
                     />
                     <img
                       className="virus-green-right-small "
                       alt="virus"
                       src={VirusGreenRight}
+                      loading="lazy"
                     />
                   </>
                 ) : null}
@@ -62,6 +65,7 @@ export default function PreventionSection() {
                     className="left-virus"
                     alt="virus"
                     src={VirusGreenLeft}
+                    loading="lazy"
                   />
                 ) : null}
                 <div className="number-val">{index + 1}</div>
@@ -74,7 +78,8 @@ export default function PreventionSection() {
             <img
               className="illustration-image"
               src={data.coverImage}
-              alt="cover "
+              alt="cover"
+              loading="lazy"
             />
           </div>
         )

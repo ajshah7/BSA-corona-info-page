@@ -30,20 +30,28 @@ const OverviewSection = () => {
           className="illustration"
           src={Illustration1}
           alt="IllustrationContainer"
+          loading="lazy"
         />
       </div>
 
       {/* What is Covid */}
       <div className="landing-section two">
-        <img className="virus-image full" alt="virus" src={paleVirus} />
+        <img
+          className="virus-image full"
+          alt="virus"
+          src={paleVirus}
+          loading="lazy"
+        />
         <img
           className="virus-image half"
           alt="virus-half"
           src={paleVirusHalf}
+          loading="lazy"
         />
         <img
           className="illustration"
           src={CoronaIllustration}
+          loading="lazy"
           alt="IllustrationContainer"
         />
 

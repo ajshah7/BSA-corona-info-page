@@ -21,7 +21,12 @@ export default function ContagionSection() {
           </div>
           <div className="card-wrapper">
             <div className="card">
-              <img className="card-image" alt="card-images" src={Cough} />
+              <img
+                className="card-image"
+                alt="card-images"
+                src={Cough}
+                loading="lazy"
+              />
               <div className="card-header">Air Transmission</div>
               <div className="text-content">
                 Objectively evolve tactical expertise before extensible
@@ -29,21 +34,36 @@ export default function ContagionSection() {
               </div>
             </div>
             <div className="card">
-              <img className="card-image" alt="card-images" src={HandWash} />
+              <img
+                className="card-image"
+                alt="card-images"
+                src={HandWash}
+                loading="lazy"
+              />
               <div className="card-header">Human Contacts</div>
               <div className="text-content">
                 Washing your hands is one of thesimplest ways you can protect
               </div>
             </div>
             <div className="card">
-              <img className="card-image" alt="card-images" src={CupImage} />
+              <img
+                className="card-image"
+                alt="card-images"
+                src={CupImage}
+                loading="lazy"
+              />
               <div className="card-header">Containted Objects</div>
               <div className="text-content">
                 Use the tissue while sneezing,In this way, you can protect your
                 droplets.
               </div>
             </div>
-            <img className="virus-image-card" alt="virus" src={paleVirus} />
+            <img
+              className="virus-image-card"
+              alt="virus"
+              src={paleVirus}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -59,13 +79,24 @@ export default function ContagionSection() {
           </div>
         </div>
         <div className="illustration-wrapper">
-          <img src={PinkPetalLeft} alt="petal" className="petal-image left" />
+          <img
+            src={PinkPetalLeft}
+            alt="petal"
+            className="petal-image left"
+            loading="lazy"
+          />
           <img
             alt="illustration"
             className="illustration-image"
             src={SymptompsIllu}
+            loading="lazy"
           />
-          <img src={PinkPetalRight} alt="petal" className="petal-image right" />
+          <img
+            src={PinkPetalRight}
+            alt="petal"
+            className="petal-image right"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

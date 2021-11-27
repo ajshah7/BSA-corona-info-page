@@ -31,6 +31,7 @@ const LiveReportsSection = (props) => {
                 className="country-image"
                 src={item.countryInfo?.flag}
                 alt="flag"
+                loading="lazy"
               />
               <div className="name">{item.country}</div>
             </div>
@@ -40,9 +41,19 @@ const LiveReportsSection = (props) => {
                 item.todayRecovered,
                 item.todayCases
               ) ? (
-                <img src={RedArrow} alt="arrow" className="arrows" />
+                <img
+                  src={RedArrow}
+                  alt="arrow"
+                  className="arrows"
+                  loading="lazy"
+                />
               ) : (
-                <img src={GreenArrow} alt="arrow" className="arrows" />
+                <img
+                  src={GreenArrow}
+                  alt="arrow"
+                  className="arrows"
+                  loading="lazy"
+                />
               )}
             </div>
           </div>
@@ -54,7 +65,7 @@ const LiveReportsSection = (props) => {
 
   return (
     <div className="livereport-component">
-      <img alt="map" src={Map} className="map-image" />
+      <img alt="map" src={Map} className="map-image" loading="lazy" />
       <div className="report-wrapper">
         <div className="report-list">
           <div className="actions">
