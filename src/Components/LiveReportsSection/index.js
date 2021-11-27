@@ -4,7 +4,7 @@ import Map from "../../Assets/Images/map.svg";
 import RedArrow from "../../Assets/Images/redArrow.svg";
 import GreenArrow from "../../Assets/Images/greenArrow.svg";
 import { API_LOADING_STATUS_CONSTANTS } from "../../constants";
-import MapComponent from "../MapComponent";
+// import MapComponent from "../MapComponent";
 
 import "./styles.scss";
 const LiveReportsSection = (props) => {
