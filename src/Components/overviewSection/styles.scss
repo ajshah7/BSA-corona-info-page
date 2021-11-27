@@ -1,0 +1,133 @@
+.landing-section-component {
+  font-style: normal;
+  font-weight: normal;
+  // main wrapper
+  .landing-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .data-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      @media only screen and (max-width: 900px) {
+        padding-left: 0%;
+        padding-right: 0%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      text-align: left;
+      text-transform: capitalize;
+
+      // cta specific
+      .button-wrapper {
+        display: flex;
+        .solid-button {
+          margin-top: 2rem;
+          background-color: #fb4c47;
+          color: white;
+          padding: 1rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          font-weight: bold;
+          border-radius: 1.5rem;
+          cursor: pointer;
+          transition-duration: 550ms;
+          font-size: 1rem;
+          &:hover {
+            background-color: red;
+          }
+          &:active {
+            opacity: 0.3;
+          }
+          @media only screen and (max-width: 900px) {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            &:hover {
+              background-color: #fb4c47;
+            }
+          }
+        }
+        .light-button {
+          margin-top: 2rem;
+          background-color: #fa565226;
+          color: #fb4c47;
+          padding: 1rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          font-weight: bold;
+          border-radius: 1.5rem;
+          cursor: pointer;
+          transition-duration: 550ms;
+          &:active {
+            opacity: 0.3;
+          }
+          &:hover {
+            background-color: #fb4c47;
+            color: white;
+          }
+          @media only screen and (max-width: 900px) {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            &:hover {
+              background-color: #fa565226;
+              color: #fb4c47;
+            }
+          }
+        }
+      }
+    }
+    // content postion specific
+    .left {
+      padding-left: 10%;
+      padding-right: 5%;
+    }
+    .right {
+      padding-right: 10%;
+      padding-left: 5%;
+    }
+  }
+  // main wrapper session count specific
+  .one {
+    background-color: #fefdfd;
+    @media only screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+  .two {
+    position: relative;
+    @media only screen and (max-width: 900px) {
+      padding-bottom: 0rem;
+      flex-direction: column-reverse;
+    }
+  }
+  // illustraion and images
+  .illustration {
+    width: 50%;
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+  }
+  .virus-image {
+    width: 50%;
+    position: absolute;
+
+    @media only screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+  .full {
+    right: 2rem;
+    bottom: 0;
+    width: 6rem;
+  }
+  .half {
+    right: 0;
+    bottom: 5rem;
+    width: 8rem;
+  }
+}

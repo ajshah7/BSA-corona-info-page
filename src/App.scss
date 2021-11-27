@@ -1,0 +1,61 @@
+.App {
+  width: 100%;
+
+  .data-wrapper-center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    text-transform: capitalize;
+    @media only screen and (max-width: 900px) {
+      padding-left: 0%;
+      padding-right: 0%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+  }
+
+  //global main heading
+  .header {
+    color: #025754;
+    font-weight: bold;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 38.4px;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    @media only screen and (max-width: 900px) {
+      margin-top: 0.5rem;
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+  //global main colored sub header
+  .sub-heading {
+    color: #fa5652;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 22.4px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 900px) {
+      font-size: 19.2px;
+      text-align: center;
+    }
+  }
+  //global main text content
+  .text-content {
+    font-family: "Kanit", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    line-height: 215%;
+    text-transform: capitalize;
+    color: #4b4f51;
+    @media only screen and (max-width: 900px) {
+      text-align: center;
+      margin-top: 1rem;
+      width: 90%;
+    }
+  }
+}

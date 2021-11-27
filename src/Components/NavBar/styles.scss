@@ -1,0 +1,136 @@
+.navbar-component {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2.5rem;
+  padding-left: 10%;
+  padding-right: 11%;
+  box-sizing: border-box;
+  @media only screen and (max-width: 900px) {
+    margin-top: 1rem;
+    // flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    @media only screen and (max-width: 900px) {
+      margin-top: 1rem;
+      width: 100%;
+      justify-content: center;
+    }
+    .logo {
+      height: 3rem;
+      width: 3rem;
+      cursor: pointer;
+      transition-duration: 500ms;
+      &:hover {
+        scale: 1.2;
+      }
+      @media only screen and (max-width: 900px) {
+        &:hover {
+          scale: 1;
+        }
+      }
+    }
+    .heading {
+      font-family: "Red Hat Display", sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-left: 1rem;
+    }
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    a {
+      text-decoration: none;
+    }
+    .items {
+      border: 0 !important;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-left: 1rem;
+      cursor: pointer;
+      transition-duration: 500ms;
+      color: black;
+      &:hover {
+        color: #fa5652;
+      }
+      @media only screen and (max-width: 900px) {
+        margin-left: 0;
+        margin-top: 0.8rem;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+    .selected-item {
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-left: 1rem;
+      cursor: pointer;
+      color: #fa5652;
+      text-align: center;
+      position: relative;
+      @media only screen and (max-width: 900px) {
+        margin-left: 0;
+        margin-top: 0.8rem;
+      }
+      .selection-dot {
+        font-size: 1.2rem;
+        position: absolute;
+        width: 100%;
+        @media only screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .contact-button {
+    font-size: 0.8rem;
+    border: 1px #fa5652 solid;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: #fa5652;
+    transition-duration: 500ms;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 1rem;
+    &:hover {
+      background-color: #fa5652;
+      color: white;
+    }
+    @media only screen and (max-width: 900px) {
+      margin-left: 0;
+      margin-top: 0.8rem;
+      &:hover {
+        background-color: white;
+        color: #fa5652;
+      }
+    }
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
