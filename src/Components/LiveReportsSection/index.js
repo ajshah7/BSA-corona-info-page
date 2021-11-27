@@ -16,7 +16,7 @@ const LiveReportsSection = (props) => {
   }
 
   const getDayRecoverdToNewCaseRatio = (recoverdCount, caseCount) => {
-    if (parseInt(recoverdCount > caseCount)) {
+    if (recoverdCount > caseCount || recoverdCount === caseCount) {
       return true;
     }
     return false;
@@ -42,14 +42,14 @@ const LiveReportsSection = (props) => {
                 item.todayCases
               ) ? (
                 <img
-                  src={RedArrow}
+                  src={GreenArrow}
                   alt="arrow"
                   className="arrows"
                   loading="lazy"
                 />
               ) : (
                 <img
-                  src={GreenArrow}
+                  src={RedArrow}
                   alt="arrow"
                   className="arrows"
                   loading="lazy"
@@ -101,7 +101,7 @@ const LiveReportsSection = (props) => {
               <RenderCountryList />
 
               {covidLiveData.data?.length / 6 < page ? (
-                <div className="text-content">"You have reached the End!" </div>
+                <div className="text-content">You have reached the End!</div>
               ) : null}
             </>
           )}
