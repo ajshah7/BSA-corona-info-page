@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copy-right-text">
-        2020 @ All rights reserved by Aditya Kumar
+        2020 @ All rights reserved by pixelspark.co
       </div>
     </div>
   );
