@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import Map from "../../Assets/Images/map.svg";
 import RedArrow from "../../Assets/Images/redArrow.svg";
 import GreenArrow from "../../Assets/Images/greenArrow.svg";
 import { API_LOADING_STATUS_CONSTANTS } from "../../constants";
-// import MapComponent from "../MapComponent";
+import MapComponent from "../MapComponent";
 
 import "./styles.scss";
 const LiveReportsSection = (props) => {
@@ -65,7 +64,7 @@ const LiveReportsSection = (props) => {
 
   return (
     <div className="livereport-component">
-      <img alt="map" src={Map} className="map-image" loading="lazy" />
+      <MapComponent />
       <div className="report-wrapper">
         <div className="report-list">
           <div className="actions">

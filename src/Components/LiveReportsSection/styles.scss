@@ -9,13 +9,7 @@
     flex-direction: column;
     padding: 1rem;
   }
-  .map-image {
-    width: 50%;
-    @media only screen and (max-width: 900px) {
-      width: 100%;
-      margin-top: 1rem;
-    }
-  }
+
   .report-wrapper {
     display: flex;
     justify-content: center;
