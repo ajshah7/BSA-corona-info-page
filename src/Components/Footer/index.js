@@ -7,11 +7,13 @@ import FaceBook from "../../Assets/Images/faceBook.svg";
 import Youtube from "../../Assets/Images/youtube.svg";
 import Vimeo from "../../Assets/Images/vimeo.svg";
 import Twitter from "../../Assets/Images/twitter.svg";
+
 import "./styles.scss";
 
 const Footer = () => {
   return (
     <div className="footer-component">
+      {/*  Email contact section starts from here*/}
       <div className="contact-us-container">
         <img
           className="half-virus-img"
@@ -54,6 +56,7 @@ const Footer = () => {
             <div className="items">Treatment</div>{" "}
           </HashLink>
         </div>
+        {/*  footer navigation  section starts from here*/}
         <div className="footer-nav-items">
           <img
             className="logo-item"

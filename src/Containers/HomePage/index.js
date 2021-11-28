@@ -12,8 +12,10 @@ import "./styles.scss";
 
 const HomePage = (props) => {
   useEffect(() => {
+    //   calling live covid data on home page load
     props.fetchCovidData();
   }, []);
+
   return (
     <>
       <OverviewSection />

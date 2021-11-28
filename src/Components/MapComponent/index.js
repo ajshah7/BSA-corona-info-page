@@ -1,8 +1,9 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
+
 import "./styles.scss";
 
-function MapComponent(props) {
+const MapComponent = () => {
   return (
     <div className="map-component">
       <GoogleMapReact
@@ -12,6 +13,6 @@ function MapComponent(props) {
       />
     </div>
   );
-}
+};
 
 export default MapComponent;

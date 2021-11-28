@@ -1,5 +1,4 @@
 import React from "react";
-
 import VirusGreenRight from "../../Assets/Images/virus-green-right.svg";
 import VirusGreenLeft from "../../Assets/Images/virus-green-left.svg";
 import RedVirusRight from "../../Assets/Images/virus-red-right.svg";
@@ -7,7 +6,7 @@ import { PREVENTION_DATA } from "./constants";
 
 import "./styles.scss";
 
-export default function PreventionSection() {
+const PreventionSection = () => {
   return (
     <div className="prevention-component">
       <div id="prevention">
@@ -86,4 +85,5 @@ export default function PreventionSection() {
       )}
     </div>
   );
-}
+};
+export default PreventionSection;

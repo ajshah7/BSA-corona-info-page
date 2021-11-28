@@ -6,10 +6,13 @@ import CupImage from "../../Assets/Images/cup.svg";
 import paleVirus from "../../Assets/Images/paleVirus.svg";
 import PinkPetalLeft from "../../Assets/Images/pink-petal-left.svg";
 import PinkPetalRight from "../../Assets/Images/pink-petal-right.svg";
+
 import "./styles.scss";
-export default function ContagionSection() {
+
+const ContagionSection = () => {
   return (
     <div className="contagion-section-component">
+      {/* session Contagion starts from here */}
       <div className="section one" id="contagion">
         <div className="data-wrapper-center">
           <div className="sub-heading">COVID-19</div>
@@ -67,6 +70,7 @@ export default function ContagionSection() {
           </div>
         </div>
       </div>
+      {/*section Symptomps starts from here  */}
       <div className="section two" id="symptoms">
         <div className="data-wrapper-center">
           <div className="sub-heading">COVID-19</div>
@@ -101,4 +105,5 @@ export default function ContagionSection() {
       </div>
     </div>
   );
-}
+};
+export default ContagionSection;

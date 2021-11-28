@@ -6,4 +6,5 @@ export const API_LOADING_STATUS_CONSTANTS = {
   failed: -1,
 };
 
+// live  covid data api
 export const COVID_DATA_API = "https://corona.lmao.ninja/v2/countries";

@@ -6,14 +6,17 @@ import { API_LOADING_STATUS_CONSTANTS } from "../../constants";
 import MapComponent from "../MapComponent";
 
 import "./styles.scss";
+
 const LiveReportsSection = (props) => {
   const { covidLiveData } = props;
   const [page, setPage] = useState(1);
 
+  //   paginate function which slices entire report array into page of 6
   function paginate(array, page_size) {
     return array.slice((page - 1) * page_size, page * page_size);
   }
 
+  //   function to render red arrow or green arrow based on : if today recoved < todays count then green arrow (cases droping) else red arrow (cases increasing).
   const getDayRecoverdToNewCaseRatio = (recoverdCount, caseCount) => {
     if (recoverdCount > caseCount || recoverdCount === caseCount) {
       return true;
@@ -22,6 +25,7 @@ const LiveReportsSection = (props) => {
   };
   const RenderCountryList = () => {
     if (covidLiveData.data?.length > 0) {
+      // calling paginate function to structure data into 6 contents per page
       return paginate(covidLiveData?.data, 6).map((item) => {
         return (
           <div className="data-table">
@@ -35,7 +39,8 @@ const LiveReportsSection = (props) => {
               <div className="name">{item.country}</div>
             </div>
             <div className="count">
-              {item.active?.toLocaleString()}{" "}
+              {item.active?.toLocaleString()}
+              {/* rendering green and red based on live case increase/decrease  */}
               {getDayRecoverdToNewCaseRatio(
                 item.todayRecovered,
                 item.todayCases
@@ -63,7 +68,8 @@ const LiveReportsSection = (props) => {
   };
 
   return (
-    <div className="livereport-component">
+    <div className="livereport-component" id="report">
+      {/* rendering google global map */}
       <MapComponent />
       <div className="report-wrapper">
         <div className="report-list">
@@ -74,6 +80,7 @@ const LiveReportsSection = (props) => {
                 className={`action-button ${
                   covidLiveData.data?.length / 6 < page ? "red" : "grey"
                 }`}
+                // setting pages  (decrementing on click of left arrow till its 1 page)
                 onClick={() => setPage(page !== 1 ? page - 1 : 1)}
               >
                 &lt;
@@ -83,6 +90,7 @@ const LiveReportsSection = (props) => {
                 className={`action-button ${
                   covidLiveData.data?.length / 6 > page ? "red" : "grey"
                 }`}
+                // setting pages  (increment on click of right arrow till its last page)
                 onClick={() =>
                   setPage(
                     covidLiveData.data?.length / 6 < page ? page : page + 1
@@ -98,7 +106,6 @@ const LiveReportsSection = (props) => {
           ) : (
             <>
               <RenderCountryList />
-
               {covidLiveData.data?.length / 6 < page ? (
                 <div className="text-content">You have reached the End!</div>
               ) : null}
