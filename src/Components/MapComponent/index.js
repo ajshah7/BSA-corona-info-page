@@ -9,7 +9,7 @@ const MapComponent = () => {
       <GoogleMapReact
         defaultZoom={10}
         resetBoundsOnResize={true}
-        defaultCenter={{ lat: 47.36667, lng: 8.55 }}
+        defaultCenter={{ lat: 20.5937, lng: 78.9629 }}
       />
     </div>
   );
