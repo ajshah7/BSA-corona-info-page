@@ -28,7 +28,7 @@ const NavBar = () => {
           className="mobile-nav-close-icon"
           onClick={() => closeOpenMobileNav()}
         >
-          <img src={CloseIcon} alt="close sidebar" />
+          <img src={CloseIcon} alt="close sidebar" loading="eager" />
         </div>
       )}
       <HashLink to="#Overview">
