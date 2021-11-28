@@ -103,6 +103,7 @@ const LiveReportsSection = (props) => {
             "Loading data..."
           ) : (
             <>
+              {/* rendering the live reports */}
               <RenderCountryList />
               {covidLiveData.data?.length / 6 < page ? (
                 <div className="text-content">You have reached the End!</div>
