@@ -3,7 +3,6 @@ import Illustration1 from "../../Assets/Images/illustration.svg";
 import CoronaIllustration from "../../Assets/Images/coronaIllustration.svg";
 import paleVirus from "../../Assets/Images/paleVirus.svg";
 import paleVirusHalf from "../../Assets/Images/paleVirusRight.svg";
-
 import "./styles.scss";
 
 const OverviewSection = () => {

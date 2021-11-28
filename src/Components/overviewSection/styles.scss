@@ -11,11 +11,14 @@
     .data-wrapper {
       display: flex;
       flex-direction: column;
-      width: 50%;
+      @media only screen and (min-width: 900px) {
+        width: 50%;
+      }
+
       @media only screen and (max-width: 900px) {
+        position: re;
         padding-left: 0%;
         padding-right: 0%;
-        width: 100%;
         justify-content: center;
         align-items: center;
       }
@@ -82,12 +85,24 @@
     }
     // content postion specific
     .left {
-      padding-left: 10%;
-      padding-right: 5%;
+      @media only screen and (max-width: 900px) {
+        display: flex;
+        justify-content: center;
+      }
+      @media only screen and (min-width: 900px) {
+        padding-left: 10%;
+        padding-right: 5%;
+      }
     }
     .right {
-      padding-right: 10%;
-      padding-left: 5%;
+      @media only screen and (max-width: 900px) {
+        display: flex;
+        justify-content: center;
+      }
+      @media only screen and (min-width: 900px) {
+        padding-right: 10%;
+        padding-left: 5%;
+      }
     }
   }
   // main wrapper session count specific
@@ -95,6 +110,7 @@
     background-color: #fefdfd;
     @media only screen and (max-width: 900px) {
       flex-direction: column;
+      max-width: 100%;
     }
   }
   .two {
