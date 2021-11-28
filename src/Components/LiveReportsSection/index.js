@@ -77,9 +77,7 @@ const LiveReportsSection = (props) => {
             <div className="header-medium">Live Reports</div>
             <div className="pagination">
               <button
-                className={`action-button ${
-                  covidLiveData.data?.length / 6 < page ? "red" : "grey"
-                }`}
+                className={`action-button ${page !== 1 ? "red" : "grey"}`}
                 // setting pages  (decrementing on click of left arrow till its 1 page)
                 onClick={() => setPage(page !== 1 ? page - 1 : 1)}
               >
