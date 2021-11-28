@@ -13,8 +13,8 @@ const NavBar = () => {
   const closeOpenMobileNav = () => {
     setOpenNav(!openNav);
   };
-  //   on touch/ scroll hide sidebar
-  document.body.ontouchstart = function (e) {
+  //   on scroll hide sidebar
+  document.body.ontouchmove = function (e) {
     if (isMobile && openNav) {
       setOpenNav(false);
     }
