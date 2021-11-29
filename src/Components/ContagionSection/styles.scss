@@ -44,8 +44,8 @@
       justify-content: space-between;
       margin-top: 4rem;
       margin-bottom: 4rem;
-      padding-left: 15%;
-      padding-right: 15%;
+      padding-left: 10%;
+      padding-right: 10%;
       position: relative;
       @media only screen and (max-width: 900px) {
         align-items: center;
@@ -97,6 +97,7 @@
         .card-image {
           width: 80%;
           transition-duration: 550ms;
+          height: 188.55px;
           @media only screen and (max-width: 900px) {
             width: 100%;
             margin-top: 1rem;
@@ -107,7 +108,7 @@
       .virus-image-card {
         position: absolute;
         width: 16rem;
-        left: 15%;
+        left: 9.8%;
         z-index: 0;
         bottom: 0;
         transform: translateX(-8.5rem);

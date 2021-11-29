@@ -64,7 +64,7 @@ const NavBar = () => {
           <img src={SidebarIcon} alt="open sidebar" loading="eager" />
         </div>
       ) : null}
-      {getNavbar()}
+      {isMobile ? (openNav ? getNavbar() : null) : getNavbar()}
     </div>
   );
 };
