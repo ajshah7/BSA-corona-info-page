@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import RedArrow from "../../Assets/Images/redArrow.svg";
 import GreenArrow from "../../Assets/Images/greenArrow.svg";
@@ -8,8 +9,13 @@ import MapComponent from "../MapComponent";
 import "./styles.scss";
 
 const LiveReportsSection = (props) => {
-  const { covidLiveData } = props;
+  const { covidLiveData, fetchCovidData } = props;
   const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    //   calling live covid api
+    fetchCovidData();
+  }, []);
 
   //   paginate function which slices entire report array into page of 6
   function paginate(array, page_size) {
@@ -67,6 +73,20 @@ const LiveReportsSection = (props) => {
     return null;
   };
 
+  // covid api status messages
+  let apiStatusMessage = {
+    message: "",
+    error: "",
+  };
+  if (covidLiveData.status === API_LOADING_STATUS_CONSTANTS.loading) {
+    apiStatusMessage.message = "Loading...";
+  } else if (covidLiveData.status === API_LOADING_STATUS_CONSTANTS.failed) {
+    apiStatusMessage.message = "Something went wrong!";
+    apiStatusMessage.error = "red-error";
+  } else if (covidLiveData.data?.length / 6 < page) {
+    apiStatusMessage.message = "You have reached the End!";
+  }
+
   return (
     <div className="livereport-component" id="report">
       {/* rendering google global map */}
@@ -99,17 +119,15 @@ const LiveReportsSection = (props) => {
               </button>
             </div>
           </div>
-          {covidLiveData.status === API_LOADING_STATUS_CONSTANTS.loading ? (
-            "Loading data..."
-          ) : (
+          {covidLiveData.status === API_LOADING_STATUS_CONSTANTS.success ? (
             <>
               {/* rendering the live reports */}
               <RenderCountryList />
-              {covidLiveData.data?.length / 6 < page ? (
-                <div className="text-content">You have reached the End!</div>
-              ) : null}
             </>
-          )}
+          ) : null}
+          <div className={`text-content ${apiStatusMessage.error}`}>
+            {apiStatusMessage.message}
+          </div>
         </div>
       </div>
     </div>

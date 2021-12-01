@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import OverviewSection from "../../Components/overviewSection";
 import ContagionSection from "../../Components/ContagionSection";
@@ -11,17 +11,12 @@ import { fetchCovidData } from "./thunks";
 import "./styles.scss";
 
 const HomePage = (props) => {
-  useEffect(() => {
-    //   calling live covid data on home page load
-    props.fetchCovidData();
-  }, []);
-
   return (
     <>
       <OverviewSection />
       <ContagionSection />
       <PreventionSection />
-      <LiveReportsSection />
+      <LiveReportsSection fetchCovidData={props.fetchCovidData} />
       <Footer />
     </>
   );
