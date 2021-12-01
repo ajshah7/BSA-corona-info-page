@@ -32,9 +32,9 @@ const LiveReportsSection = (props) => {
   const RenderCountryList = () => {
     if (covidLiveData.data?.length > 0) {
       // calling paginate function to structure data into 6 contents per page
-      return paginate(covidLiveData?.data, 6).map((item) => {
+      return paginate(covidLiveData?.data, 6).map((item, index) => {
         return (
-          <div className="data-table">
+          <div className="data-table" key={index}>
             <div className="country-details">
               <img
                 className="country-image"

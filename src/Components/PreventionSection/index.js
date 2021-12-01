@@ -23,7 +23,7 @@ const PreventionSection = () => {
       {PREVENTION_DATA.map((data, index) =>
         (index + 1) % 2 === 0 ? (
           // odd index will render text on left and image on right
-          <div className="content-wrapper right">
+          <div className="content-wrapper right" key={index}>
             <img
               className="illustration-image"
               src={data.coverImage}
@@ -60,7 +60,7 @@ const PreventionSection = () => {
           </div>
         ) : (
           // even index will render text on right and image on left
-          <div className="content-wrapper left">
+          <div className="content-wrapper left" key={index}>
             <div className="data-wrapper even">
               <div className="text-items">
                 {/* if its first element render accent virus background image as follows*/}
